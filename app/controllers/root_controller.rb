@@ -30,7 +30,7 @@ class RootController < ApplicationController
 
 	private
 
-	def extract_locations_from_website(url, pagelimit = 3)
+	def extract_locations_from_website(url, pagelimit = 2)
 		locations = []
 		
 		(1..pagelimit).each do |page_num|
