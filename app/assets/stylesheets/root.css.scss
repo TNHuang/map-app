@@ -1,0 +1,56 @@
+// Place all the styles related to the root controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.strong {
+	font-weight: bold;
+}
+
+.btn {
+	position: relative;
+	margin-right: 20px;
+	background: #0c6;
+	border-radius: 5px;
+	padding: 5px;
+	text-decoration: none;
+	border-bottom: 2px solid #aaa;
+	color: white;
+	transition: background, 0.3s;
+}
+
+.btn:hover {
+	background: #0e9;
+	color: black;
+}
+
+.btn:active {
+	top:2px;
+	border:none;
+}
+
+
+.left {
+	float: left;
+}
+
+.main {
+	width: 90%;
+	margin: 20px auto;
+	& > * {
+		margin-right: 20px;
+	}
+}
+
+.container {
+	display: block;
+	&:after {
+		content: "";
+		clear:both;
+		display:block;
+	}
+}
+
+.btns-container {
+	margin: 20px auto;
+	width: 20%;
+}

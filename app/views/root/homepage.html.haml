@@ -1,0 +1,27 @@
+.btns-container.container
+	=link_to "crawl xml", crawl_xml_url, class: "btn crawl-xml-btn"
+	=link_to "crawl website", crawl_website_url, class: "btn crawl-website-btn"
+.main.container
+	-if @locations && @locations.length > 0
+		%img{ src: @google_static_map_url, class: "left"}
+		%table.locations-container.container.left
+			-if @isXml
+				%tr
+					%td.strong address
+					%td.strong city
+					%td.strong state
+					%td.strong zip
+				- @locations.each do |location|
+					%tr.location
+						%td= location[:address]
+						%td= location[:city]
+						%td= location[:state]
+						%td= location[:zip]
+			-else
+				%tr
+					%td.strong address
+				- @locations.each do |location|
+					%tr.location
+						%td= location
+
+	
